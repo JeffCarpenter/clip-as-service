@@ -39,7 +39,7 @@ setup(
     long_description=_long_description,
     long_description_content_type='text/markdown',
     zip_safe=False,
-    setup_requires=['setuptools>=18.0', 'wheel'],
+    setup_requires=['setuptools>=18.0', 'wheel', 'numpy>=1.25.2'],
     install_requires=[
         'ftfy',
         'torch',
@@ -49,7 +49,7 @@ setup(
         'docarray<0.30.0',
         'prometheus-client',
         'open_clip_torch>=2.8.0',
-        'pillow-avif-plugin'
+        'pillow-avif-plugin',
     ],
     extras_require={
         'onnx': [

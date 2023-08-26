@@ -25,7 +25,7 @@ open-clip-torch = ">=2.8.0"
 pillow-avif-plugin = "*"
 prometheus-client = "*"
 regex = "*"
-torch = "*"
+torch = {version = "*", source = "torchcpu"}
 torchvision = "*"
 transformers = {version = ">=4.16.2", optional = true}
 
@@ -34,5 +34,13 @@ search = ["annlite"]
 cn_clip = ["cn-clip"]
 flash-attn = ["flash-attn"]
 tensorrt = ["nvidia-tensorrt"]
-onnx = ["onnx", "onnxmltools", "onnxruntime-gpu"]
+onnx = ["onnx", "onnxmltools"]
+onnx-gpu = ["onnxruntime-gpu"]
+onnx-intel = ["onnxruntime-openvivo"]
 transformers = ["transformers"]
+
+[[tool.poetry.source]]
+name = "torchcpu"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "explicit"
+
