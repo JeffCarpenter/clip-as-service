@@ -10,7 +10,7 @@ homepage = "https://github.com/jina-ai/clip-as-service"
 authors = ["Jina AI <hello@jina.ai>"]
 
 [tool.poetry.dependencies]
-python = "*"
+python = ">=3.7, <3.11"
 annlite = {version = ">=0.3.10", optional = true}
 cn-clip = {optional = true, version = "*"}
 docarray = "<0.30.0"
@@ -25,7 +25,7 @@ open-clip-torch = ">=2.8.0"
 pillow-avif-plugin = "*"
 prometheus-client = "*"
 regex = "*"
-torch = {version = "*", source = "torchcpu"}
+torch = {version = "~2.0.1", source = "torchcpu"}
 torchvision = "*"
 transformers = {version = ">=4.16.2", optional = true}
 
