@@ -71,7 +71,7 @@ class CLIPEncoder(Executor):
         self._image_transform = clip._transform_blob(self._model.image_size)
 
         # define the priority order for the execution providers
-        providers = ['CPUExecutionProvider']
+        providers = onnxruntime.capi._pybind_state.get_available_providers() 
 
         # prefer CUDA Execution Provider over CPU Execution Provider
         if self._device.startswith('cuda'):
