@@ -1,0 +1,38 @@
+[tool]
+[tool.poetry]
+name = "clip-server"
+version = "0.8.3"
+description = "Embed images and sentences into fixed-length vectors via CLIP"
+license = "Apache 2.0"
+keywords = ["jina", "openai", "clip", "deep-learning", "cross-modal", "multi-modal", "neural-search"]
+classifiers = ["Development Status :: 5 - Production/Stable", "Intended Audience :: Developers", "Intended Audience :: Education", "Intended Audience :: Science/Research", "Programming Language :: Python :: 3.7", "Programming Language :: Python :: 3.8", "Programming Language :: Python :: 3.9", "Programming Language :: Python :: 3.10", "Programming Language :: Unix Shell", "Environment :: Console", "License :: OSI Approved :: Apache Software License", "Operating System :: OS Independent", "Topic :: Database :: Database Engines/Servers", "Topic :: Scientific/Engineering :: Artificial Intelligence", "Topic :: Internet :: WWW/HTTP :: Indexing/Search", "Topic :: Scientific/Engineering :: Image Recognition", "Topic :: Multimedia :: Video", "Topic :: Scientific/Engineering", "Topic :: Scientific/Engineering :: Mathematics", "Topic :: Software Development", "Topic :: Software Development :: Libraries", "Topic :: Software Development :: Libraries :: Python Modules"]
+homepage = "https://github.com/jina-ai/clip-as-service"
+authors = ["Jina AI <hello@jina.ai>"]
+
+[tool.poetry.dependencies]
+python = "*"
+annlite = {version = ">=0.3.10", optional = true}
+cn-clip = {optional = true, version = "*"}
+docarray = "<0.30.0"
+flash-attn = {optional = true, version = "*"}
+ftfy = "*"
+jina = ">=3.12.0"
+nvidia-tensorrt = {version = "==8.4.1.5", optional = true}
+onnx = {optional = true, version = "*"}
+onnxmltools = {optional = true, version = "*"}
+onnxruntime-gpu = {version = "<=1.13.1", optional = true}
+open-clip-torch = ">=2.8.0"
+pillow-avif-plugin = "*"
+prometheus-client = "*"
+regex = "*"
+torch = "*"
+torchvision = "*"
+transformers = {version = ">=4.16.2", optional = true}
+
+[tool.poetry.extras]
+search = ["annlite"]
+cn_clip = ["cn-clip"]
+flash-attn = ["flash-attn"]
+tensorrt = ["nvidia-tensorrt"]
+onnx = ["onnx", "onnxmltools", "onnxruntime-gpu"]
+transformers = ["transformers"]
