@@ -1,0 +1,7 @@
+[tool]
+[tool.poetry]
+name = "clip_server"
+version = "0.8.3"
+
+[tool.poetry.dependencies]
+python = "*"
